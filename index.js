@@ -13,6 +13,7 @@ function createWindow(){
         protocol: 'file:',
         slashes: true
     }))
+    win.webContents.openDevTools();
 }
 
 app.on('ready', createWindow);
