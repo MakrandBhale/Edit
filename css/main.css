@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+    padding: 0%;
+    background-color: black;
+    position: relative;
+}
+
+#code {
+    height: 100%;
+}
