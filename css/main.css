@@ -15,4 +15,6 @@ html, body {
 
 .CodeMirror{
     height: 100%;
+    font-family: Consolas, monospace;
+    font-size: 14px;
 }

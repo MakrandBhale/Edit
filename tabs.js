@@ -6,7 +6,8 @@ const TabGroup = require("electron-tabs");
 const bootstrap = require("bootstrap");
 const dragula = require("dragula");
 
-let tabGroup = new TabGroup({
+
+tabGroup = new TabGroup({
     ready: function (tabGroup) {
         dragula([tabGroup.tabContainer], {
             direction: "horizontal"
@@ -19,17 +20,18 @@ function addTab(title, active){
         title: title,
         src: './code.html',
         visible: true,
-        active: active,
+        active: false,
         webviewAttributes: {
             'nodeintegration': true
         },
         ready: tab => {
             // Open dev tools for webview
             let webview = tab.webview;
-            
+
             if (!!webview) {
                 webview.addEventListener('dom-ready', () => {
-                    webview.openDevTools();
+                    //webview.openDevTools();
+                    tab.activate(active);
                 })
             }
         }
