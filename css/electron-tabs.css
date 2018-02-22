@@ -1,9 +1,15 @@
+div :focus{
+    outline: none;
+}
+
+.fa{
+    color: #0984e3;
+}
 .etabs-tabgroup {
     width: 100%;
     height: 32px;
-    background-color: #ccc;
+    background-color: #2A313B;
     cursor: default;
-    font: caption;
     font-size: 14px;
     -webkit-user-select: none;
     user-select: none;
@@ -16,20 +22,21 @@
 .etabs-tab {
     display: none;
     position: relative;
-    color: #333;
+    color: #ccc;
     height: 22px;
     padding: 6px 8px 4px;
-    border: 1px solid #aaa;
-    border-bottom: none;
-    border-left: none;
-    background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%);
+    background-color: #2A313B;
     font: caption;
     font-size: 14px;
-    background-color: #ccc;
     cursor: default;
-    
+    border-right: 1px solid rgb(106, 125, 160);
 }
 
+/* Active tab */
+.etabs-tab.active {
+    color: #333;
+    background-color: #fff;
+}
 /* Dragula */
 .etabs-tab.gu-mirror {
     padding-bottom: 0;
@@ -43,34 +50,32 @@
     display: inline-block;
 }
 
-.etabs-tab.active {
-    background: #fff;
-}
 
 .etabs-tab.flash {
     background: linear-gradient(to bottom, rgba(255,243,170,1) 0%,rgba(255,227,37,1) 100%);
 }
 
+/* Add tab button */
 .etabs-buttons {
     float: left;
 }
-
+/* Add tab button */
 .etabs-buttons button {
     float: left;
-    color: #333;
+    color: #eee;
     background: none;
     border: none;
-    font-size: 12px;
-    margin-top: 6px;
+    font-size: 14px;
+    margin-top: 4px;
     border-radius: 2px;
     margin-left: 4px;
     width: 20px;
     text-align: center;
     padding: 4px 0;
 }
-
+/* Add tab button */
 .etabs-buttons button:hover {
-    color: #eee;
+    color: #333;
     background-color: #aaa;
 }
 
@@ -98,37 +103,41 @@
     max-width: 16px;
     max-height: 16px;
 }
-
+/* tab title */
 .etabs-tab-title {
     display: inline-block;
     margin-left: 10px;
 }
 
+/* close tab button */
 .etabs-tab-buttons {
     display: inline-block;
     margin-left: 10px;
 }
-
+/* close tab button */
 .etabs-tab-buttons button {
     display: inline-block;
     color: #333;
     background: none;
     border: none;
+    height: 20px;
     width: 20px;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 50%;
 }
-
+/* close tab button */
 .etabs-tab-buttons button:hover {
     color: #eee;
-    background-color: #aaa;
+    background-color: #d63031;
+    background: #d63031;
 }
 
 .etabs-views {
-    border-top: 1px solid #aaa;
-    height: calc(100vh - 33px);
+    border-top: 0px;
+     
+    height: calc(100vh - 32px);
 }
 
-/* .etab-view {
+.etab-view {
 
-} */
+}

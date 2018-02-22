@@ -6,7 +6,6 @@ const { Menu, MenuItem } = remote
 // page will carry out operation to that page. More neat.
 // Webview == guestpage. ;)
 
-
 function order(command) {
   // this line however named getCurrentTab will return the webview of the tab. && //Sending the message.
   activeWebview = tabGroup.getActiveTab().webview;
@@ -26,23 +25,21 @@ const template = [
         click: function openFile() {
           order('showOpenDialog');
           //Setting listner for opened file-name which can be used to setup file name.
-          tabGroup.getActiveTab().webview.addEventListener('ipc-message', (event)=>{
-            if(event.channel == 'fileName'){
-              tabGroup.getActiveTab().setTitle(event.args);
-            }
-          });
+          
         }
       },
       {
-        label: 'Save File',
+        label: 'Save',
         accelerator: 'Ctrl+S',
+        click: () =>{
+          order('save');
+        }
+      },
+      {
+        label: 'Save As...',
+        accelerator: 'Ctrl+Shift+S',
         click: function saveFile() {
           order('showSaveDialog');
-          tabGroup.getActiveTab().webview.addEventListener('ipc-message', (event)=>{
-            if(event.channel == 'fileName'){
-              tabGroup.getActiveTab().setTitle(event.args);
-            }
-          });
         }
       },
       {
@@ -158,9 +155,20 @@ const template = [
           order('replaceAll');
         }
       },
-
+      {
+        label: 'Autoclose tags, brackets.',
+        
+        type: 'checkbox',
+        click: function () {
+          order('autoclose');
+        }
+      },
     ]
   },
+  {
+    label: 'View'
+
+  }
 ]
 
 
