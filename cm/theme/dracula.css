@@ -7,12 +7,25 @@
 
 */
 
+/* Dynamic colors for tabs*/
+.etabs-tabgroup {
+  background-color: #2A313B;
+}
+.etabs-tab {
+  color: #ccc;
+}
+
+.etabs-tab.active{
+  background-color: #282a36;
+  color: #ccc;
+}
 
 .cm-s-dracula.CodeMirror, .cm-s-dracula .CodeMirror-gutters {
   background-color: #282a36 !important;
   color: #f8f8f2 !important;
   border: none;
 }
+
 .cm-s-dracula .CodeMirror-gutters { color: #282a36; }
 .cm-s-dracula .CodeMirror-cursor { border-left: solid thin #f8f8f0; }
 .cm-s-dracula .CodeMirror-linenumber { color: #6D8A88; }

@@ -23,19 +23,21 @@ div :focus{
     display: none;
     position: relative;
     color: #ccc;
-    height: 22px;
+    height: 20px;
     padding: 6px 8px 4px;
     background-color: #2A313B;
     font: caption;
     font-size: 14px;
     cursor: default;
     border-right: 1px solid rgb(106, 125, 160);
+    border-bottom: 2px solid transparent;
 }
 
 /* Active tab */
 .etabs-tab.active {
     color: #333;
     background-color: #fff;
+    border-bottom: 2px solid #6c5ce7;
 }
 /* Dragula */
 .etabs-tab.gu-mirror {
@@ -133,9 +135,8 @@ div :focus{
 }
 
 .etabs-views {
-    border-top: 0px;
-     
-    height: calc(100vh - 32px);
+    border: 1px solid #6c5ce7;;
+    height: calc(100vh - 34px);
 }
 
 .etab-view {
