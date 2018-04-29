@@ -43,13 +43,11 @@ function getFileName(pathName) {
  
 function setFileWatcher(){
     editor.on("change", (cm, change) =>{
-
         if(file != null){
             fs.writeFile(file,editor.doc.getValue(), (err) => {
                 if(err){ipcRenderer.sendToHost("error" ,err)}
            });
         }
-        
     })
 }
 // change syntax highlight
@@ -57,9 +55,9 @@ function setFileWatcher(){
 function changeMode(pathName){
     // codemirror automatically returns the vitals of the file and decides the mode that should be used.
     // How Cool ... innit ?
-    console.log(cMirror.findModeByFileName(pathName).mime);
+    console.log(cMirror.findModeByFileName(pathName));
     editor.setOption("mode", cMirror.findModeByFileName(pathName).mime);
-
+    ipcRenderer.send("fileMode",cMirror.findModeByFileName(pathName).name);
 }
 
 ipcRenderer.on('autoclose', ()=>{

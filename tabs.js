@@ -30,6 +30,7 @@ function addTab(title, active) {
             // Open dev tools for webview
             let webview = tab.webview;
             webview.addEventListener('ipc-message', (event) => {
+                
                 if (event.channel == 'fileName') {
                     tabGroup.getActiveTab().setTitle(event.args); 
                 }
@@ -43,6 +44,9 @@ function addTab(title, active) {
                     if(!thisTab.getTitle().includes(" \u25CF")){
                         thisTab.setTitle(thisTab.getTitle());
                     }
+                }
+                else if(event.channel == "fileMode") {
+                    
                 }
             });
             if (!!webview) {
