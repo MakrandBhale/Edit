@@ -3,18 +3,18 @@
     <head>
         <title>Edit</title>
         <link rel="stylesheet" href="css/electron-tabs.css">
-        <link rel="stylesheet" href="css/code.css">
+        <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="node_modules/dragula/dist/dragula.css">
-        <link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/ionicons.css">
     </head>
     <body onload="addTab('New File', true)">
-        <div class="etabs-tabgroup" >
-            <div class="etabs-tabs"></div>
+        <div class="tabs etabs-tabgroup">
+            <div id="tab" class="etabs-tabs"></div>
             <div class="etabs-buttons">
-                <button onclick="addTab('New File', true)">  </button>
+                <button style="font-size:1.7em;" onclick="addTab('New File', true)"><i class="ion-android-add"></i></button>
             </div>
         </div>
-        <div class="etabs-views"></div>
+        <div class="content etabs-views"></div>
         <script src="tabs.js"></script>
         <script src="js/menu.js"></script>
     </body>

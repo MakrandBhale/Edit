@@ -8,6 +8,7 @@ const dragula = require("dragula");
 
 
 tabGroup = new TabGroup({
+    closeButtonText: '<i class="ion-android-close"></i>',
     ready: function (tabGroup) {
         dragula([tabGroup.tabContainer], {
             direction: "horizontal"
@@ -19,10 +20,11 @@ tabGroup = new TabGroup({
 function addTab(title, active) {
     let tab = tabGroup.addTab({
         title: title,
-        src: './code.html',
+        src: './tabs.html',
         visible: true,
         active: false,
         icon: 'fa fa-file',
+        
         webviewAttributes: {
             'nodeintegration': true
         },
@@ -51,7 +53,7 @@ function addTab(title, active) {
             });
             if (!!webview) {
                 webview.addEventListener('dom-ready', () => {
-                    webview.openDevTools();
+                    //webview.openDevTools();
                     tab.activate(active);
                 })
             }

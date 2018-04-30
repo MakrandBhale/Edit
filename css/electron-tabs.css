@@ -1,12 +1,13 @@
 .etabs-tabgroup {
     width: 100%;
-    height: 32px;
-    background-color: #ccc;
+    height: 42px;
+    background-color: #E0E0E0;
     cursor: default;
     font: caption;
     font-size: 14px;
     -webkit-user-select: none;
     user-select: none;
+    
 }
 
 .etabs-tabs {
@@ -14,19 +15,35 @@
 }
 
 .etabs-tab {
-    display: none;
-    position: relative;
-    color: #333;
-    height: 22px;
+    height: 28px;
     padding: 6px 8px 4px;
-    border: 1px solid #aaa;
-    border-bottom: none;
-    border-left: none;
-    background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%);
-    font: caption;
+    position: relative;
+    display: none;
+    border-top: 3px solid transparent;
+    color: #333;
+    background: transparent;
+    /* background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); */
     font-size: 14px;
-    background-color: #ccc;
     cursor: default;
+}
+
+.etabs-tabs div:hover {
+    border-top: 3px solid #8888F8;
+}
+
+
+.etabs-tab.active {
+    background: #fff;
+    border-top: 3px solid #8888F8;
+}
+
+.etabs-views {
+    border-top: 0px solid #aaa;
+    height: calc(100vh - 42px);
+}
+
+.etab-view {
+
 }
 
 /* Dragula */
@@ -36,15 +53,14 @@
 
 .etabs-tab:first-child {
     border-left: none;
+    margin-left: 4px;
 }
 
 .etabs-tab.visible {
     display: inline-block;
 }
 
-.etabs-tab.active {
-    background: #fff;
-}
+
 
 .etabs-tab.flash {
     background: linear-gradient(to bottom, rgb(43, 43, 43) 0%,rgb(37, 37, 37) 100%);
@@ -58,21 +74,17 @@
     float: left;
     color: #333;
     background: none;
-    background-color: #fff;
+    background-color: transparent;
     border: none;
-    font-size: 12px;
-    margin-top: 6px;
     border-radius: 2px;
-    margin-left: 4px;
-    width: 20px;
-    height: 20px;
+    margin: 10px 0 0 8px;
     text-align: center;
-    padding: 4px 0;
+    padding: 0px 1 0 1;
 }
 
 .etabs-buttons button:hover {
     color: black;
-    background-color: #fff;
+    background-color: transparent;
 }
 
 .etabs-tab-badge {
@@ -112,24 +124,17 @@
 
 .etabs-tab-buttons button {
     display: inline-block;
-    color: #333;
+    color: transparent;
     background: none;
     border: none;
-    width: 20px;
+    font-size: 1.3em;
     text-align: center;
-    border-radius: 2px;
+    color: #333
 }
 
 .etabs-tab-buttons button:hover {
-    color: black;
+    color: tomato;
+    font-size: 1.3em;
     background-color: transparent;
 }
 
-.etabs-views {
-    border-top: 1px solid #aaa;
-    height: calc(100vh - 33px);
-}
-
-.etab-view {
-
-}
