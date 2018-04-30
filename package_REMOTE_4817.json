@@ -1,0 +1,19 @@
+{
+  "name": "edit",
+  "version": "1.0.0",
+  "description": "3rd iteration of iEdit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MakrandBhale/edit.git"
+  },
+  "author": "Makarand Bhale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MakrandBhale/edit/issues"
+  },
+  "homepage": "https://github.com/MakrandBhale/edit#readme"
+}
