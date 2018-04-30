@@ -1,4 +1,74 @@
-## 5.34.0 (2010-01-29)
+## 5.37.0 (2018-04-20)
+
+### Bug fixes
+
+Suppress keypress events during composition, for platforms that don't properly do this themselves.
+
+[xml-fold addon](http://codemirror.net/demo/folding.html): Improve handling of line-wrapped opening tags.
+
+[javascript mode](http://codemirror.net/mode/javascript/): Improve TypeScript support.
+
+[python mode](http://codemirror.net/mode/python/): Highlight expressions inside format strings.
+
+### New features
+
+[vim bindings](http://codemirror.net/demo/vim.html): Add support for '(' and ')' movement.
+
+New themes: [idea](http://codemirror.net/demo/theme.html#idea), [ssms](http://codemirror.net/demo/theme.html#ssms), [gruvbox-dark](http://codemirror.net/demo/theme.html#gruvbox-dark).
+
+## 5.36.0 (2018-03-20)
+
+### Bug fixes
+
+Make sure all document-level event handlers are registered on the document that the editor is part of.
+
+Fix issue that prevented edits whose origin starts with `+` from being combined in history events for an editor-less document.
+
+[multiplex addon](http://codemirror.net/demo/multiplex.html): Improve handling of indentation.
+
+[merge addon](http://codemirror.net/doc/manual.html#addon_merge): Use CSS `:after` element to style the scroll-lock icon.
+
+[javascript-hint addon](http://codemirror.net/doc/manual.html#addon_javascript-hint): Don't provide completions in JSON mode.
+
+[continuelist addon](http://codemirror.net/doc/manual.html#addon_continuelist): Fix numbering error.
+
+[show-hint addon](http://codemirror.net/doc/manual.html#addon_show-hint): Make `fromList` completion strategy act on the current token up to the cursor, rather than the entire token.
+
+[markdown mode](http://codemirror.net/mode/markdown/): Fix a regexp with potentially exponental complexity.
+
+### New features
+
+New theme: [lucario](http://codemirror.net/demo/theme.html#lucario).
+
+## 5.35.0 (2018-02-20)
+
+### Bug fixes
+
+Fix problem where selection undo might change read-only documents.
+
+Fix crash when calling `addLineWidget` on a document that has no attached editor.
+
+[searchcursor addon](http://codemirror.net/doc/manual.html#addon_searchcursor): Fix behavior of `^` in multiline regexp mode.
+
+[match-highlighter addon](http://codemirror.net/doc/manual.html#addon_match-highlighter): Fix problem with matching words that have regexp special syntax in them.
+
+[sublime bindings](http://codemirror.net/demo/sublime.html): Fix `addCursorToSelection` for short lines.
+
+[javascript mode](http://codemirror.net/mode/javascript/): Support TypeScript intersection types, dynamic `import`.
+
+[stex mode](http://codemirror.net/mode/stex/): Fix parsing of `\(` `\)` delimiters, recognize more atom arguments.
+
+[haskell mode](http://codemirror.net/mode/haskell/): Highlight more builtins, support `<*` and `*>`.
+
+[sql mode](http://codemirror.net/mode/sql/): Make it possible to disable backslash escapes in strings for dialects that don't have them, do this for MS SQL.
+
+[dockerfile mode](http://codemirror.net/mode/dockerfile/): Highlight strings and ports, recognize more instructions.
+
+### New features
+
+[vim bindings](http://codemirror.net/demo/vim.html): Support alternative delimiters in replace command.
+
+## 5.34.0 (2018-01-29)
 
 ### Bug fixes
 

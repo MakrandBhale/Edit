@@ -16,14 +16,11 @@ requirejs([
 ], function (CodeMirror) {
     cMirror = CodeMirror;
     editor = CodeMirror(document.getElementById("code"), {
-        mode: "text/plain",
         theme: "dracula",
         styleActiveLine: true,
         lineNumbers: true,
         lineWrapping: true,
-        
-        scrollbarStyle: "overlay",
-        
+        mode: "htmlmixed",
     });
     setFileWatcher();
 });

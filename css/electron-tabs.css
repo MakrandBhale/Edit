@@ -1,15 +1,9 @@
-div :focus{
-    outline: none;
-}
-
-.fa{
-    color: #0984e3;
-}
 .etabs-tabgroup {
     width: 100%;
     height: 32px;
-    background-color: #2A313B;
+    background-color: #ccc;
     cursor: default;
+    font: caption;
     font-size: 14px;
     -webkit-user-select: none;
     user-select: none;
@@ -22,23 +16,19 @@ div :focus{
 .etabs-tab {
     display: none;
     position: relative;
-    color: #ccc;
-    height: 20px;
+    color: #333;
+    height: 22px;
     padding: 6px 8px 4px;
-    background-color: #2A313B;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    border-left: none;
+    background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%);
     font: caption;
     font-size: 14px;
+    background-color: #ccc;
     cursor: default;
-    border-right: 1px solid rgb(106, 125, 160);
-    border-bottom: 2px solid transparent;
 }
 
-/* Active tab */
-.etabs-tab.active {
-    color: #333;
-    background-color: #fff;
-    border-bottom: 2px solid #6c5ce7;
-}
 /* Dragula */
 .etabs-tab.gu-mirror {
     padding-bottom: 0;
@@ -52,33 +42,37 @@ div :focus{
     display: inline-block;
 }
 
-
-.etabs-tab.flash {
-    background: linear-gradient(to bottom, rgba(255,243,170,1) 0%,rgba(255,227,37,1) 100%);
+.etabs-tab.active {
+    background: #fff;
 }
 
-/* Add tab button */
+.etabs-tab.flash {
+    background: linear-gradient(to bottom, rgb(43, 43, 43) 0%,rgb(37, 37, 37) 100%);
+}
+
 .etabs-buttons {
     float: left;
 }
-/* Add tab button */
+
 .etabs-buttons button {
     float: left;
-    color: #eee;
+    color: #333;
     background: none;
+    background-color: #fff;
     border: none;
-    font-size: 14px;
-    margin-top: 4px;
+    font-size: 12px;
+    margin-top: 6px;
     border-radius: 2px;
     margin-left: 4px;
     width: 20px;
+    height: 20px;
     text-align: center;
     padding: 4px 0;
 }
-/* Add tab button */
+
 .etabs-buttons button:hover {
-    color: #333;
-    background-color: #aaa;
+    color: black;
+    background-color: #fff;
 }
 
 .etabs-tab-badge {
@@ -105,38 +99,35 @@ div :focus{
     max-width: 16px;
     max-height: 16px;
 }
-/* tab title */
+
 .etabs-tab-title {
     display: inline-block;
     margin-left: 10px;
 }
 
-/* close tab button */
 .etabs-tab-buttons {
     display: inline-block;
     margin-left: 10px;
 }
-/* close tab button */
+
 .etabs-tab-buttons button {
     display: inline-block;
     color: #333;
     background: none;
     border: none;
-    height: 20px;
     width: 20px;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 2px;
 }
-/* close tab button */
+
 .etabs-tab-buttons button:hover {
-    color: #eee;
-    background-color: #d63031;
-    background: #d63031;
+    color: black;
+    background-color: transparent;
 }
 
 .etabs-views {
-    border: 1px solid #6c5ce7;;
-    height: calc(100vh - 34px);
+    border-top: 1px solid #aaa;
+    height: calc(100vh - 33px);
 }
 
 .etab-view {
