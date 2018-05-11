@@ -1,7 +1,7 @@
 .etabs-tabgroup {
     width: 100%;
-    height: 42px;
-    background-color: #E0E0E0;
+    height: 48px;
+    background-color: rgb(230, 230, 230);
     cursor: default;
     font: caption;
     font-size: 14px;
@@ -15,35 +15,44 @@
 }
 
 .etabs-tab {
-    height: 28px;
-    padding: 6px 8px 4px;
+    margin-top: 6px;
+    margin-right: 4px;
+    height: 24px;
+    padding: 6px 8px 6px;
     position: relative;
     display: none;
-    border-top: 3px solid transparent;
-    color: #333;
+    color: #343a3b;
     background: transparent;
     /* background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(204,204,204,1) 100%); */
     font-size: 14px;
     cursor: default;
+    border-radius: 48px;
 }
 
 .etabs-tabs div:hover {
-    border-top: 3px solid #8888F8;
+    /* border-top: 3px solid #8888F8; */
 }
 
 
 .etabs-tab.active {
     background: #fff;
-    border-top: 3px solid #8888F8;
+    /* border-top: 3px solid #8888F8; */
 }
-
+.etabs-tab.active:hover {
+    background: #fff;
+    /* border-top: 3px solid #8888F8; */
+}
+.etabs-tab:hover {
+    background: rgb(241, 241, 241);
+    /* border-top: 3px solid #8888F8; */
+}
 .etabs-views {
-    border-top: 0px solid #aaa;
-    height: calc(100vh - 42px);
+    border-top: 0px solid transparent;
+    height: calc(100vh - 48px);
 }
 
 .etab-view {
-
+    
 }
 
 /* Dragula */
@@ -72,18 +81,17 @@
 
 .etabs-buttons button {
     float: left;
-    color: #333;
+    color: #5e6367;
     background: none;
     background-color: transparent;
     border: none;
-    border-radius: 2px;
-    margin: 10px 0 0 8px;
+    margin: 12px 0 0 12px;
     text-align: center;
-    padding: 0px 1 0 1;
+    
 }
 
 .etabs-buttons button:hover {
-    color: black;
+    color: #676c70;
     background-color: transparent;
 }
 
@@ -115,6 +123,7 @@
 .etabs-tab-title {
     display: inline-block;
     margin-left: 10px;
+    color: #3e4245;
 }
 
 .etabs-tab-buttons {
@@ -129,7 +138,7 @@
     border: none;
     font-size: 1.3em;
     text-align: center;
-    color: #333
+    color: #5e6367;
 }
 
 .etabs-tab-buttons button:hover {
