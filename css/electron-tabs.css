@@ -1,7 +1,7 @@
 .etabs-tabgroup {
     width: 100%;
     height: 48px;
-    background-color: rgb(230, 230, 230);
+    background-color: #e7e9ec;
     cursor: default;
     font: caption;
     font-size: 14px;
@@ -35,7 +35,8 @@
 
 .etabs-tab.active {
     background: #fff;
-    box-shadow: 1px 2px 4px rgba(94, 94, 94, 0.5);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 1px 2px 4px rgba(94, 94, 94, 0.2); */
     /* border-top: 3px solid #8888F8; */
 }
 .etabs-tab.active:hover {
@@ -80,19 +81,24 @@
 }
 
 .etabs-buttons button {
+    /* Add Button */
     float: left;
     color: #5e6367;
     background: none;
-    background-color: transparent;
+    background-color: #fff;
     border: none;
-    margin: 12px 0 0 12px;
+    margin: 8px 0 0 8px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
     text-align: center;
-    
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 .etabs-buttons button:hover {
     color: #676c70;
-    background-color: transparent;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 .etabs-tab-badge {
@@ -132,6 +138,7 @@
 }
 
 .etabs-tab-buttons button {
+    /* Close Button */
     display: inline-block;
     color: transparent;
     background: none;
