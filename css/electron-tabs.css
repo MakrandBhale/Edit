@@ -1,22 +1,22 @@
 .etabs-tabgroup {
     width: 100%;
     height: 48px;
-    background-color: #e7e9ec;
+    background-color: rgba(255, 255, 255, 0.1);
     cursor: default;
-    font: caption;
-    font-size: 14px;
+    font-size: 18px;
+    font-family: Roboto;
     -webkit-user-select: none;
     user-select: none;
 }
 
 .etabs-tabs {
     float: left;
+    vertical-align:middle;
 }
 
 .etabs-tab {
-    margin-top: 6px;
+    margin-top: 7px;
     margin-right: 4px;
-    height: 24px;
     padding: 6px 8px 6px;
     position: relative;
     display: none;
@@ -48,8 +48,9 @@
     /* border-top: 3px solid #8888F8; */
 }
 .etabs-views {
-    border-top: 0px solid transparent;
-    height: calc(100vh - 48px);
+    height: calc(100vh - 48px - 24px);
+    /* space for status bar */
+    padding-bottom: 24px;
 }
 
 .etab-view {
@@ -83,22 +84,21 @@
 .etabs-buttons button {
     /* Add Button */
     float: left;
-    color: #5e6367;
+    color: #5e6367; 
     background: none;
-    background-color: #fff;
+    background-color: rgb(253, 235, 72);
     border: none;
     margin: 8px 0 0 8px;
     border-radius: 50%;
     height: 32px;
     width: 32px;
-    text-align: center;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
 }
 
 .etabs-buttons button:hover {
-    color: #676c70;
-    background-color: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    /* color: #676c70;
+    background-color: #FFEB3B;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 1.4), 0 1px 5px 0 rgba(0, 0, 0, 1.2), 0 3px 1px -2px rgba(0, 0, 0, 1.2); */
 }
 
 .etabs-tab-badge {
@@ -130,6 +130,9 @@
     display: inline-block;
     margin-left: 10px;
     color: #3e4245;
+    vertical-align: middle;
+    font-family: Roboto;
+    font-size: 16px;
 }
 
 .etabs-tab-buttons {
@@ -145,6 +148,7 @@
     border: none;
     font-size: 1.3em;
     text-align: center;
+    vertical-align: middle;
     color: #5e6367;
 }
 

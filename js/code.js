@@ -21,6 +21,7 @@ requirejs([
         lineNumbers: true,
         lineWrapping: true,
         mode: "htmlmixed",
+        scrollbarStyle: "overlay"
     });
     setFileWatcher();
 });

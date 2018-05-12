@@ -6,15 +6,26 @@
         <link rel="stylesheet" href="css/index.css">
         <link rel="stylesheet" href="node_modules/dragula/dist/dragula.css">
         <link rel="stylesheet" href="css/ionicons.css">
+        <link rel="stylesheet" href="node_modules/typeface-roboto/index.css">
+        <!-- For material icons -->
+        <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+        
     </head>
     <body onload="addTab('New File', true)">
+        
         <div class="tabs etabs-tabgroup">
             <div id="tab" class="etabs-tabs"></div>
             <div class="etabs-buttons">
                 <button style="font-size:1.7em;" onclick="addTab('New File', true)"><i class="ion-android-add"></i></button>
+                <!-- <button class="" onclick="addTab('New File', true)">
+                    <i class="material-icons grey-text text-darken-3">add</i>
+                  </button> -->
             </div>
         </div>
         <div class="content etabs-views"></div>
+        <div id="statusBar" class="statusBar">  
+            <button class="statusBar-buttons">Language</button>
+        </div>
         <script src="tabs.js"></script>
         <script src="js/menu.js"></script>
     </body>
