@@ -11,7 +11,7 @@
   "devDependencies": {
     "bootstrap": "^4.0.0",
     "codemirror": "^5.34.0",
-    "electron": "~1.7.8",
+    "electron": "~7.2.4",
     "electron-tabs": "^0.9.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
